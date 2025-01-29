@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal .content {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  min-width: 300px;
+  min-height: 100px;
+  border-radius: 7px;
+}
+.modal .content button {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.modal .content button svg {
+  position: relative;
+};
+  position: absolute;
+  z-index: 1;
+}
+.Select ul {
+  position: relative;
+  list-style: none;
+  width: 300px;
+  padding: 0;
+  padding-left: 16px;
+}
+.Select ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  min-height: 32px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.Select input {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-right: 16px;
+}
+.Select button {
+  border: none;
+  background: none;
+  height: 32px;
+  margin-top: 16px;
+  margin-right: 8px;
+}
+.Select button.close {
+  transform: rotate(180deg);
+}
+.Select .SelectTitle--show {
+  display: flex;
+}
+.Select .SelectTitle--hide {
+  color: white;
+}
