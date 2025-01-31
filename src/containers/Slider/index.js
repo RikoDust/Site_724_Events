@@ -7,21 +7,20 @@ import "./style.scss";
 const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
+
+  // Affichage du plus ancien au plus recent OK
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
-    
-    // Modification de l'opérateur logique ( > au lieu de < )
-    // Pour un affichage de la plus récente à la plus ancienne (ordre décroissant)
-    new Date(evtA.date) > new Date(evtB.date) ? -1 : 1 
-  );
+    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1 );
+
   const nextCard = () => {
     setTimeout(
       
         // Ajout de +1 à l'index afin de supprimer l'element "undefined"
         // Ajout de "?" pour vérifier que "byDateDesc" existe bien
       () => setIndex(index + 1 < byDateDesc?.length ? index + 1 : 0),
-      5000
-    );
+      5000);
   };
+
   useEffect(() => {
     nextCard();
   });
@@ -30,7 +29,7 @@ const Slider = () => {
     <div className="SlideCardList">
  
       {byDateDesc?.map((event, idx) => (
-        // Suppresion des signes (<> </>) qui encapsulait 2 éléments différents 
+
         // Changement de la key en "date" pour qu'elle soit unique pour chaque slide
         <div key={event.date}> 
           <div            
@@ -61,7 +60,7 @@ const Slider = () => {
                   // Remplacement de "idx" par "index" pour indiquer sur quelle image on se trouve 
                   checked={index === radioIdx}
 
-                  // Ajout de readOnly pour retirer erreur console
+                  // Ajout de "readOnly" pour retirer erreur console
                   readOnly
                 />
               ))}
