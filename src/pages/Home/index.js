@@ -116,13 +116,15 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
-        <EventCard
-          imageSrc={last?.cover}
-          title={last?.title}
-          date={new Date(last?.date)}
+
+        <EventCard // CORRECTIONS
+          imageSrc={last?.cover || "default.jpg"} // Evite les warnings dans la console si "imageSrc" est "undefined"
+          title={last?.title || "default title"} // Evite les warnings dans la console si "title" est "undefined"
+          date={last?.date ? new Date(last.date) : new Date() } // Vérifie si "last?.date" existe avant d'essayer de la convertir en "Date"
           small
           label="boom"
         />
+
       </div>
       <div className="col contact">
         <h3>Contactez-nous</h3>
