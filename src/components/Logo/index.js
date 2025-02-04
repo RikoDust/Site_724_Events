@@ -1,4 +1,7 @@
 /* istanbul ignore file */
+
+// CORRECTIONS : Correction de la notation des propriétés CSS en camelCase en ligne 24
+
 import PropTypes from "prop-types";
 import "./style.scss";
 
