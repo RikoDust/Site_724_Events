@@ -3,6 +3,7 @@ import ServiceCard from "../../components/ServiceCard";
 import EventCard from "../../components/EventCard";
 import PeopleCard from "../../components/PeopleCard";
 
+
 import "./style.scss";
 import EventList from "../../containers/Events";
 import Slider from "../../containers/Slider";
@@ -12,8 +13,10 @@ import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
+// CORRECTIONS
 const Page = () => {
-  const {last} = useData()
+  const {data} = useData() // Destructuration de useData
+  const last = data ? data.events[data.events.length - 1] : null  // Extrait le dernier évènement de la liste "data.events" ou renvoie "null"
   return <>
     <header>
       <Menu />
@@ -113,16 +116,20 @@ const Page = () => {
         </Modal>
       </div>
     </main>
+
+
+
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
 
+        
         <EventCard // CORRECTIONS
           imageSrc={last?.cover || "default.jpg"} // Evite les warnings dans la console si "imageSrc" est "undefined"
           title={last?.title || "default title"} // Evite les warnings dans la console si "title" est "undefined"
           date={last?.date ? new Date(last.date) : new Date() } // Vérifie si "last?.date" existe avant d'essayer de la convertir en "Date"
           small
-          label="boom"
+          label={last?.type || "Unknown Type"} // Type d'évènement par default
         />
 
       </div>
@@ -158,5 +165,6 @@ const Page = () => {
     </footer>
   </>
 }
+
 
 export default Page;
