@@ -1,33 +1,33 @@
-.modal {
-  position: fixed;
-  width: 100%;
-  min-height: 100%;
-  top: 0;
-  left: 0px;
+.Logo {
+  margin: 22px;
+}h: 308px;
+  min-height: 86px;
+  position: relative;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+.SelectContainer .label {
+  color: white;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.SelectContainer.large {
+  width: 424px;
+}
+.SelectContainer.large .Select {
+  width: 442px;
+}
+.SelectContainer.large .Select ul {
+  width: 442px;
+}
+
+.Select {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  width: 308px;
+  min-height: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.modal .content {
-  position: relative;
-  overflow: hidden;
-  background: white;
-  min-width: 300px;
-  min-height: 100px;
-  border-radius: 7px;
-}
-.modal .content button {
-  position: absolute;
-  top: 4px;
-  right: 0px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.modal .content button svg {
-  position: relative;
-};
   position: absolute;
   z-index: 1;
 }
