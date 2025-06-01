@@ -1,4 +1,5 @@
-Sophie Bluel - Architecte
+#724 Events
+
 Projet - 724 Events (formation intégrateur web - Openclassrooms)
 
 Présentation :
