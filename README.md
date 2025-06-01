@@ -1,15 +1,12 @@
-# 724 Events
+Sophie Bluel - Architecte
+Projet - 724 Events (formation intégrateur web - Openclassrooms)
 
-## Description
-L'application est le site d'une agence evenementielle.
-## Pre-requis
-- NodeJS  >= v16.14.1
+Présentation :
 
-## Installation
-- `yarn install`
+Repérer et fixer l'ensemble ds bugs du site d'une agence évenementielle
+Rédiger un chier de recettes suite au debugguage
 
-## Lancement de l'application
-- `yarn start`
+Objectif pédagogiques :
 
-## Tests
-- `yarn test`
+Débugger un site web grâce aux Chrome DevTools
+Rédiger un cahier de recette pour tester un site
